@@ -1,0 +1,465 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 10px 0;
+    color: black;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.25em;
+    margin: 5;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 20px 20px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.social-icons {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: black;
+    font-size: 20px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.social-icons a:hover {
+    background-color: #e0e0e0;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#home,
+#product,
+#members,
+#timpa-teks {
+    min-height: 100vh;
+}
+
+#about {
+    height: auto;
+    padding-bottom: 100px;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-left {
+    padding-left: 20px;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-content .text-section {
+    flex: 1;
+    margin-top: 20px;
+}
+
+.main-content .text-section p {
+    margin-top: 15px;
+}
+
+.main-content .text-section h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: flex-start;
+    /* Penempatan gambar dari kiri ke kanan */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image-row img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-item {
+    flex: 0 0 auto;
+    text-align: center;
+    width: 200px;
+    /* Adjust width as needed */
+    padding: 0 10px;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+.image-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.indicator {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 3px;
+    background-color: #333;
+}
+
+.image-item.active .indicator {
+    background-color: #007bff;
+}
+
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    /* Pastikan slider mengambil lebar maksimum */
+    overflow-x: auto;
+    /* Menyediakan scrolling horizontal jika diperlukan */
+    scroll-snap-type: x mandatory;
+    /* Memastikan scroll snap ke posisi terdekat */
+    -webkit-overflow-scrolling: touch;
+    /* Enable smooth scrolling di iOS */
+}
+
+.member-card {
+    position: relative;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    padding: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    gap: 20px;
+}
+
+.member-card img {
+    width: 150px;
+    height: auto;
+    max-width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.member-card .description {
+    flex: 1;
+}
+
+.member-card .description p:first-of-type {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.member-card:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.member-card:hover .maximize-icon {
+    display: block;
+}
+
+.maximize-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: white;
+    display: none;
+}
+
+.popup-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 60px;
+}
+
+.popup-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    position: relative;
+    border-radius: 15px;
+    max-width: 600px;
+}
+
+.popup-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    max-height: 60vh;
+}
+
+.popup-description {
+    margin-top: 20px;
+}
+
+.close-btn,
+.new-tab-btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.new-tab-btn {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+.product-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.product-frame img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.product-frame p {
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.horizontal-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.horizontal-images .image-item {
+    text-align: center;
+    width: 200px;
+}
+
+.horizontal-images .image-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.horizontal-images .image-item p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .image-row img {
+        width: 200px;
+    }
+    .main-content {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    #product .main-content,
+    #members .main-content,
+    #timpa-teks .main-content {
+        align-items: flex-start;
+    }
+    section {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.25em;
+        margin: 5;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav a {
+        padding: 16px 20px;
+    }
+    .social-icons {
+        position: absolute;
+        right: 5px;
+        top: 10px;
+        display: flex;
+        gap: 10px;
+    }
+    .social-icons a {
+        color: black;
+        font-size: 20px;
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 50%;
+    }
+    .social-icons a:hover {
+        background-color: #e0e0e0;
+    }
+    /* Penyesuaian untuk bagian konten utama */
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .images {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .image-row {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .image-row img {
+        width: 150px;
+    }
+    .horizontal-images .image-item img {
+        width: 150px;
+    }
+    section {
+        padding: 20px 10px;
+    }
+    .main-content .text-section {
+        width: 100%;
+        /* Mengisi lebar penuh */
+        margin-top: 0;
+        /* Menghapus margin atas */
+        text-align: center;
+        /* Pusatkan teks */
+    }
+    .images {
+        gap: 15px;
+        /* Mengurangi jarak antar gambar */
+    }
+    .image-row img,
+    .horizontal-images .image-item img {
+        width: 25%;
+        /* Mengisi lebar penuh */
+    }
+    /* Penyesuaian untuk gambar dalam slider atau carousel */
+    .slider-container {
+        width: 100%;
+        /* Mengisi lebar penuh */
+    }
+    .slider {
+        scroll-snap-type: none;
+        /* Nonaktifkan scroll snap */
+        overflow-x: scroll;
+        /* Aktifkan scrolling horizontal */
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scrolling di iOS */
+    }
+}

@@ -1,199 +1,103 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petani Aplikasi Lumut</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
-<body>
-    <header>
-        <h1>Petani Aplikasi Lumut</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#product">Product</a>
-            <a href="#members">Members</a>
-            <a href="#timpa-teks">Timpa Teks</a>
-            <a href="#about">About</a>
-            <div class="social-icons">
-                <a href="https://github.com/Basisty034" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://discord.gg/5kZ7nVW5" target="_blank">
-                    <i class="fab fa-discord"></i>
-                </a>
-            </div>
+<body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="bg-green-700 text-white">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Petani Aplikasi Lumut</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-gray-200">Tentang Kami</a>
+                <a href="#services" class="hover:text-gray-200">Layanan</a>
+                <a href="#contact" class="hover:text-gray-200">Kontak</a>
+            </nav>
+            <button class="md:hidden text-white" id="menu-toggle" title="Toggle Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <nav id="mobile-menu" class="hidden md:hidden bg-green-600 px-4 py-3 space-y-2">
+            <a href="#about" class="block text-white">Tentang Kami</a>
+            <a href="#services" class="block text-white">Layanan</a>
+            <a href="#contact" class="block text-white">Kontak</a>
         </nav>
     </header>
 
-    <section id="home">
-        <div class="main-content">
-            <div class="text-section">
-                <h2><strong>Welcome to Petani Aplikasi Lumut</strong></h2>
-                <p>gak tau mau bilang apa tapi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies augue sit amet ante placerat, sed dictum eros vehicula. Cras id massa at ex ullamcorper dignissim. Curabitur id ante eget nibh consectetur
-                    sollicitudin. Nam sit amet sapien at est vehicula fermentum et sit amet justo.</p>
-            </div>
-            <div class="images">
-                <div class="image-row">
-                    <img src="LP Aplikasi Lumut/devmoss.png" alt="devmoss">
-                    <img src="LP Aplikasi Lumut/leafmoss.png" alt="leafmoss">
-                    <img src="LP Aplikasi Lumut/lumut3.png" alt="lumut3">
+    <!-- Hero Section -->
+    <section class="bg-green-100 py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-green-700 mb-4">Bersama Kami, Tumbuhkan Masa Depan</h2>
+            <p class="text-lg text-gray-700 mb-8">Petani Aplikasi Lumut menghubungkan teknologi dengan solusi berbasis alam.</p>
+            <a href="#about" class="bg-green-700 text-white py-2 px-6 rounded hover:bg-green-800">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-semibold text-gray-800 mb-4">Tentang Kami</h3>
+            <p class="text-gray-600">Kami adalah organisasi yang fokus pada pengembangan aplikasi berbasis teknologi hijau untuk mendukung keberlanjutan lingkungan dan pemberdayaan komunitas lokal.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-semibold text-gray-800 text-center mb-8">Layanan Kami</h3>
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-white p-6 rounded shadow hover:shadow-lg">
+                    <h4 class="text-xl font-bold text-green-700 mb-2">Pengembangan Aplikasi</h4>
+                    <p class="text-gray-600">Menciptakan aplikasi yang ramah lingkungan dan berkelanjutan.</p>
                 </div>
-                <div class="image-row">
-                    <img src="LP Aplikasi Lumut/moss03.png" alt="moss03">
-                    <img src="LP Aplikasi Lumut/mossConduct.png" alt="mossConduct">
-                    <img src="LP Aplikasi Lumut/090808.png" alt="090808">
+                <div class="bg-white p-6 rounded shadow hover:shadow-lg">
+                    <h4 class="text-xl font-bold text-green-700 mb-2">Konsultasi Teknologi</h4>
+                    <p class="text-gray-600">Membantu Anda mengimplementasikan solusi teknologi hijau.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow hover:shadow-lg">
+                    <h4 class="text-xl font-bold text-green-700 mb-2">Pelatihan Komunitas</h4>
+                    <p class="text-gray-600">Meningkatkan kapasitas komunitas dalam teknologi dan lingkungan.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="product">
-        <div class="main-content">
-            <div class="text-section">
-                <h2>Product</h2>
-                <p>Cuma beberapa kok hehe. Produk saat ini dalam bentuk aplikasi berbasis desktop dan UI design.</p>
-                <p><strong>Application</strong></p>
-                <div class="product-frame">
-                    <img src="LP Product/UI Design Visimala.png" alt="Visimala V2 Moss Edition">
-                    <p>Visimala V2 Moss Edition</p>
-                </div>
-                <p><strong>UI Design</strong></p>
-                <div class="horizontal-images">
-                    <div class="image-item">
-                        <img src="LP Product/UI Random.png" alt="UI Random">
-                        <p>UI Random</p>
-                    </div>
-                    <div class="image-item">
-                        <img src="LP Product/UI Design Visimala.png" alt="UI Design Visimala">
-                        <p>UI Design Visimala</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-3xl font-semibold text-gray-800 mb-8">Kontak Kami</h3>
+            <form action="#" method="post" class="max-w-lg mx-auto space-y-4">
+                <input type="text" name="name" placeholder="Nama" class="w-full p-3 border rounded" required>
+                <input type="email" name="email" placeholder="Email" class="w-full p-3 border rounded" required>
+                <textarea name="message" placeholder="Pesan" class="w-full p-3 border rounded" rows="5" required></textarea>
+                <button type="submit" class="bg-green-700 text-white py-2 px-6 rounded hover:bg-green-800">Kirim Pesan</button>
+            </form>
         </div>
     </section>
 
-    <section id="members">
-        <div class="main-content">
-            <div class="text-section">
-                <h2>Members</h2>
-                <p>Membernya pro semua cuman ketuanya kayak babi israel</p>
-            </div>
-            <div class="images">
-                <div class="member-card" data-name="UI/UX Designer" data-description="This is AbiJr, our talented UI/UX Designer." data-image="LP member/AbiJr.jpg">
-                    <img src="LP member/AbiJr.jpg" alt="UI/UX Designer">
-                    <div class="description">
-                        <p>UI/UX Designer</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies augue sit amet ante placerat, sed dictum eros vehicula.</p>
-                    </div>
-                    <i class="fas fa-expand maximize-icon"></i>
-                </div>
-                <div class="member-card" data-name="Fullstack Developer" data-description="This is pakelcomedy, our skilled Fullstack Developer." data-image="LP member/pakelcomedy.png">
-                    <img src="LP member/pakelcomedy.png" alt="Fullstack Developer">
-                    <div class="description">
-                        <p>Fullstack Developer</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies augue sit amet ante placerat, sed dictum eros vehicula.</p>
-                    </div>
-                    <i class="fas fa-expand maximize-icon"></i>
-                </div>
-                <div class="member-card" data-name="Database Operator" data-description="This is basisty034, our expert Database Operator." data-image="LP member/basisty034.png">
-                    <img src="LP member/basisty034.png" alt="Database Operator">
-                    <div class="description">
-                        <p>Database Operator</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies augue sit amet ante placerat, sed dictum eros vehicula.</p>
-                    </div>
-                    <i class="fas fa-expand maximize-icon"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="timpa-teks">
-        <div class="main-content">
-            <div class="text-section">
-                <h2>Timpa Teks</h2>
-                <p>Cuma gambar yang ditimpa teks diatasnya dan konteksnya udah jelas</p>
-            </div>
-            <div class="slider-container">
-                <div class="slider">
-                    <div class="image-item">
-                        <img src="LP Timpa Teks/carok mas.jpeg" alt="Carok Mas">
-                        <p>Carok Mas</p>
-                    </div>
-                    <div class="image-item">
-                        <img src="LP Timpa Teks/henshin.jpeg" alt="Henshin">
-                        <p>Henshin</p>
-                    </div>
-                    <div class="image-item">
-                        <img src="LP Timpa Teks/jadi gini mas.jpeg" alt="Jadi Gini Mas">
-                        <p>Jadi Gini Mas</p>
-                    </div>
-                    <div class="image-item">
-                        <img src="LP Timpa Teks/kartu.jpeg" alt="Kartu">
-                        <p>Kartu</p>
-                    </div>
-                    <div class="image-item">
-                        <img src="LP Timpa Teks/khodam.jpeg" alt="Khodam">
-                        <p>Khodam</p>
-                    </div>
-                    <div class="image-item">
-                        <img src="LP Timpa Teks/lu biar apa kek gitu.jpeg" alt="Lu Biar Apa Kek Gitu">
-                        <p>Lu Biar Apa Kek Gitu</p>
-                    </div>
-                    <div class="image-item">
-                        <img src="LP Timpa Teks/menjadi femboy.jpeg" alt="Menjadi Femboy">
-                        <p>Menjadi Femboy</p>
-                    </div>
-                    <div class="image-item">
-                        <img src="LP Timpa Teks/nih ku kasih mie.jpeg" alt="Nih Ku Kasih Mie">
-                        <p>Nih Ku Kasih Mie</p>
-                    </div>
-                    <div class="image-item">
-                        <img src="LP Timpa Teks/tua bangka.jpeg" alt="Tua Bangka">
-                        <p>Tua Bangka</p>
-                    </div>
-                    <div class="image-item">
-                        <img src="LP Timpa Teks/sudah saatnya.jpeg" alt="Sudah Saatnya">
-                        <p>Sudah Saatnya</p>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <section id="about">
-        <div class="about-content">
-            <h2>About Us</h2>
-            <img src="LP Aplikasi Lumut/Abi01.png" alt="LP Aplikasi Lumut" class="profile-image">
-            <p>Petani Aplikasi Lumut adalah grup yang dibentuk secara rahasia dengan tujuan untuk mengatasi hambatan dari 'SEPUH S' selama pengembangan produk Teknologi Informasi. Grup ini juga bertanggung jawab atas jalannya pengembangan tersebut.</p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-left">
-            <p>Created by Basisty034</p>
-        </div>
-        <div class="footer-right">
-            <a href="https://github.com/Basisty034/LP-Petani-Aplikasi-Lumut" target="_blank">Source Code</a>
+    <!-- Footer Section -->
+    <footer class="bg-green-700 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Petani Aplikasi Lumut. Semua hak dilindungi.</p>
         </div>
     </footer>
 
-    <!-- Pop-up Modal -->
-    <div id="popup-modal" class="popup-modal">
-        <div class="popup-content">
-            <span class="close-btn">&times;</span>
-            <img id="popup-image" src="" alt="">
-            <div class="popup-description">
-                <h3 id="popup-title"></h3>
-                <p id="popup-text"></p>
-            </div>
-            <a id="new-tab-btn" class="new-tab-btn" href="" target="_blank">New Tab</a>
-        </div>
-    </div>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-    <script src="script.js"></script>
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
-
 </html>
+
+Petani Aplikasi Lumut adalah grup yang dibentuk secara rahasia dengan tujuan untuk mengatasi hambatan dari 'SEPUH S' selama pengembangan produk Teknologi Informasi. Grup ini juga bertanggung jawab atas jalannya pengembangan tersebut.
+
+buat itu di tentang kami.

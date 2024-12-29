@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petani Aplikasi Lumut</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Link ke file CSS eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-gray-50">
     <!-- Header Section -->
-    <header class="bg-green-700 text-white">
+    <header class="bg-green-700 text-white sticky top-0 z-50">
         <div class="container mx-auto px-4 py-6 flex justify-between items-center">
             <h1 class="text-2xl font-bold">Petani Aplikasi Lumut</h1>
             <nav class="hidden md:flex space-x-6">
                 <a href="#about" class="hover:text-gray-200">Tentang Kami</a>
-                <a href="#services" class="hover:text-gray-200">Layanan</a>
+                <a href="#products" class="hover:text-gray-200">Produk</a>
                 <a href="#member" class="hover:text-gray-200">Member</a>
             </nav>
             <button class="md:hidden text-white" id="menu-toggle" title="Toggle Menu">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
         </div>
         <nav id="mobile-menu" class="hidden md:hidden bg-green-600 px-4 py-3 space-y-2">
             <a href="#about" class="block text-white">Tentang Kami</a>
-            <a href="#services" class="block text-white">Layanan</a>
+            <a href="#products" class="block text-white">Produk</a>
             <a href="#member" class="block text-white">Member</a>
         </nav>
     </header>
@@ -35,8 +37,10 @@
     <section class="bg-green-100 py-20">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-bold text-green-700 mb-4">Bersama Kami, Tingkatkan Kerja Rodi</h2>
-            <p class="text-lg text-gray-700 mb-8">Petani Aplikasi Lumut menghubungkan teknologi dengan solusi pindah alam.</p>
-            <a href="#about" class="bg-green-700 text-white py-2 px-6 rounded hover:bg-green-800">Pelajari Lebih Lanjut</a>
+            <p class="text-lg text-gray-700 mb-8">Petani Aplikasi Lumut menghubungkan teknologi dengan solusi pindah
+                alam.</p>
+            <a href="#about" class="bg-green-700 text-white py-2 px-6 rounded hover:bg-green-800">Pelajari Lebih
+                Lanjut</a>
         </div>
     </section>
 
@@ -44,14 +48,16 @@
     <section id="about" class="py-16">
         <div class="container mx-auto px-4 text-center">
             <h3 class="text-3xl font-semibold text-gray-800 mb-4">Tentang Kami</h3>
-            <p class="text-gray-600">Petani Aplikasi Lumut adalah grup yang dibentuk secara rahasia dengan tujuan untuk mengatasi hambatan dari 'SEPUH S' selama pengembangan produk Teknologi Informasi. Grup ini juga bertanggung jawab atas jalannya pengembangan tersebut.</p>
+            <p class="text-gray-600 max-w-3xl mx-auto">Petani Aplikasi Lumut adalah grup yang dibentuk secara rahasia
+                dengan tujuan untuk mengatasi hambatan dari 'SEPUH S' selama pengembangan produk Teknologi Informasi.
+                Grup ini juga bertanggung jawab atas jalannya pengembangan tersebut.</p>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="bg-gray-100 py-16">
+    <!-- Products Section -->
+    <section id="products" class="bg-gray-100 py-16">
         <div class="container mx-auto px-4">
-            <h3 class="text-3xl font-semibold text-gray-800 text-center mb-8">Layanan Kami</h3>
+            <h3 class="text-3xl font-semibold text-gray-800 text-center mb-8">Produk Kami</h3>
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <div class="bg-white p-6 rounded shadow hover:shadow-lg">
                     <h4 class="text-xl font-bold text-green-700 mb-2">Pengembangan Aplikasi</h4>
@@ -75,17 +81,20 @@
             <h3 class="text-3xl font-semibold text-gray-800 mb-8">Member</h3>
             <div class="flex justify-center items-center space-x-8">
                 <div class="text-center">
-                    <img src="https://via.placeholder.com/150" alt="Member 1" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <img src="https://via.placeholder.com/150" alt="Member 1"
+                        class="w-32 h-32 rounded-full mx-auto mb-4">
                     <h4 class="font-bold text-green-700">Nama Member 1</h4>
                     <p class="text-gray-600">Deskripsi singkat tentang member ini.</p>
                 </div>
                 <div class="text-center">
-                    <img src="https://via.placeholder.com/150" alt="Member 2" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <img src="https://via.placeholder.com/150" alt="Member 2"
+                        class="w-32 h-32 rounded-full mx-auto mb-4">
                     <h4 class="font-bold text-green-700">Nama Member 2</h4>
                     <p class="text-gray-600">Deskripsi singkat tentang member ini.</p>
                 </div>
                 <div class="text-center">
-                    <img src="https://via.placeholder.com/150" alt="Member 3" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <img src="https://via.placeholder.com/150" alt="Member 3"
+                        class="w-32 h-32 rounded-full mx-auto mb-4">
                     <h4 class="font-bold text-green-700">Nama Member 3</h4>
                     <p class="text-gray-600">Deskripsi singkat tentang member ini.</p>
                 </div>
@@ -109,4 +118,5 @@
         });
     </script>
 </body>
+
 </html>

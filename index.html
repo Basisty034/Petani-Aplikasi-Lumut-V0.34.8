@@ -14,7 +14,8 @@
     <header class="bg-green-700 text-white sticky top-0 z-50">
         <div class="container mx-auto px-4 py-6 flex justify-between items-center">
             <h1 class="text-2xl font-bold">Petani Aplikasi Lumut</h1>
-            <nav class="hidden md:flex space-x-6">
+            <!-- Nav untuk layar md ke atas -->
+            <nav class="hidden md:flex items-center space-x-6">
                 <a href="#about"
                     class="hover:text-gray-200 transition-all duration-300 ease-in-out transform hover:scale-105">Tentang
                     Kami</a>
@@ -23,24 +24,25 @@
                 <a href="#gallery"
                     class="hover:text-gray-200 transition-all duration-300 ease-in-out transform hover:scale-105">Galeri</a>
             </nav>
+            <!-- Tombol menu untuk layar sm -->
             <button class="md:hidden text-white" id="menu-toggle" title="Toggle Menu">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
         </div>
+        <!-- Menu untuk layar sm -->
         <nav id="mobile-menu"
-            class="hidden md:hidden bg-green-600 px-4 py-3 space-y-2 transition-all duration-500 ease-in-out transform">
+            class="hidden flex-col bg-green-600 px-4 py-3 space-y-2 transition-all duration-500 ease-in-out transform">
             <a href="#about"
-                class="block text-white py-2 hover:bg-green-700 transition-all duration-300 ease-in-out">Tentang
-                Kami</a>
+                class="block text-white py-2 hover:bg-green-700 transition-all duration-300 ease-in-out">Tentang Kami</a>
             <a href="#products"
                 class="block text-white py-2 hover:bg-green-700 transition-all duration-300 ease-in-out">Produk</a>
             <a href="#gallery"
                 class="block text-white py-2 hover:bg-green-700 transition-all duration-300 ease-in-out">Galeri</a>
         </nav>
     </header>
+    
 
     <!-- Hero Section -->
 <section class="bg-[url('assets/lumuten.svg')] bg-cover bg-center py-20 relative">
